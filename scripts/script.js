@@ -20,12 +20,14 @@ class Game {
     }
 
     startGame(e) {
-        // if (e.target.classList.contains('letter') === false) return
-        if (e.keyCode < 65 || e.keyCode > 90 || e.keyCode === 86 || e.target.classList.contains('clicked')) return
+        if (e.keyCode < 65 || e.keyCode > 90  || e.target.classList.contains('clicked') || this.keyboard.keyCodesClicked.includes(e.keyCode) || e.target.classList.contains('letter') === false && e.keyCode === undefined) return
+        
         const word = this.word.getWord();
         const result = this.checkWin(word);
+
         if (this.hangman.mistakes >= this.hangman.maxMistakes || result) return;
         
+        this.keyboard.keyCodesClicked.push(e.keyCode);
         this.keyboard.getKey(e);
         const letter = this.keyboard.returnKey();
         this.getResult(letter, word);
@@ -56,7 +58,7 @@ class Game {
                 check.push(true) 
             }
         })
-        if (check.length === word.length || this.hangman.mistakes === 10) {
+        if (check.length === word.length || this.hangman.mistakes === this.hangman.maxMistakes) {
             return true;
     }
 }

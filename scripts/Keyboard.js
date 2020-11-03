@@ -1,8 +1,8 @@
 class Keyboard {
     constructor() {
-        const _keys = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'q', 'w', 'x', 'y', 'z'];
+        const _keys = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
         this.clicked 
-        this.keyCodes = [];
+        this.keyCodesClicked = [];
         
         this.createKeyboard = (keys) => {
             for (let i = 0; i < _keys.length; i++) {
@@ -19,8 +19,8 @@ class Keyboard {
             clickedKey.classList.add('clicked');
             this.clicked = clickedKey.textContent;
         }
-        if (e.keyCode >=65 && e.keyCode < 91 && e.keyCode !== 86) {
-            const keyCodes = [65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,82,83,84,85,81,87,88,89,90];
+        if (e.keyCode >=65 && e.keyCode < 91) {
+            const keyCodes = [65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90];
             const letters = [...document.querySelectorAll('#keyboard span')]
             const i = keyCodes.indexOf(e.keyCode);
             const clickedKey = letters[i];

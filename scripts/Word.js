@@ -1,8 +1,8 @@
 class Word {
     constructor() {
         
-        this.countries = ['countries', 'poland', 'germany', 'italy', 'greece', 'spain', 'russia', 'australia', 'argentina', 'egypt', 'morocco'];
-        this.animals = ['animals', 'lion', 'tiger', 'elephant', 'panda', 'camel', 'horse', 'fox', 'rabbit', 'kangaroo', 'turtle', 'hamster'];
+        this.countries = ['countries', 'colombia', 'indonesia', 'madagascar', 'netherlands', 'portugal', 'switzerland', 'thailand', 'venezuela', 'poland', 'germany', 'italy', 'greece', 'spain', 'russia', 'australia', 'argentina', 'egypt', 'morocco'];
+        this.animals = ['animals', 'lion', 'tiger', 'elephant', 'panda', 'camel', 'horse', 'spider', 'fox', 'rabbit', 'kangaroo', 'turtle', 'hamster'];
         this.fruits = ['fruits', 'apple', 'banana', 'watermelon', 'pear', 'strawberry', 'raspberry', 'orange'];
         this.colours = ['colours', 'red', 'purple', 'pink', 'brown', 'yellow', 'white', 'black', 'green', 'blue'];
         
