@@ -20,14 +20,14 @@ class Game {
     }
 
     startGame(e) {
-        if (e.keyCode < 65 || e.keyCode > 90  || e.target.classList.contains('clicked') || this.keyboard.keyCodesClicked.includes(e.keyCode) || e.target.classList.contains('letter') === false && e.keyCode === undefined) return
-        
+        // console.log(e.target.classList)
+        if (e.keyCode < 65 || e.keyCode > 90  || e.target.classList.contains('clicked') || !e.target.classList.contains('letter')  && e.keyCode === undefined || this.keyboard.keyCodesClicked.includes(e.keyCode)) return;
         const word = this.word.getWord();
         const result = this.checkWin(word);
 
         if (this.hangman.mistakes >= this.hangman.maxMistakes || result) return;
         
-        this.keyboard.keyCodesClicked.push(e.keyCode);
+        if (e.keyCode) this.keyboard.keyCodesClicked.push(e.keyCode);
         this.keyboard.getKey(e);
         const letter = this.keyboard.returnKey();
         this.getResult(letter, word);
