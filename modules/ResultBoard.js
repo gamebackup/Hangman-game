@@ -1,4 +1,4 @@
-class ResultBoard {
+export class ResultBoard {
     constructor() {
     }
     static addBoard(win, word) {
@@ -34,5 +34,3 @@ class ResultBoard {
         }
     }
 }
-
-// export default ResultBoard

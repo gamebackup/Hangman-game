@@ -1,3 +1,7 @@
+import {Keyboard} from "./modules/Keyboard.js";
+import {Hangman} from "./modules/Hangman.js";
+import {Word} from "./modules/Word.js";
+import {ResultBoard} from "./modules/ResultBoard.js";
 
 class Game {
     constructor() {

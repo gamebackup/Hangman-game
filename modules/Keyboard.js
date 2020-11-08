@@ -1,4 +1,4 @@
-class Keyboard {
+export class Keyboard {
     constructor() {
         const _keys = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
         this.clicked 
@@ -34,4 +34,5 @@ class Keyboard {
         return this.clicked
     }
 }
+
 

@@ -1,4 +1,4 @@
-class Word {
+export class Word {
     constructor() {
         
         this.countries = ['countries', 'colombia', 'indonesia', 'madagascar', 'netherlands', 'portugal', 'switzerland', 'thailand', 'venezuela', 'poland', 'germany', 'italy', 'greece', 'spain', 'russia', 'australia', 'argentina', 'egypt', 'morocco'];
