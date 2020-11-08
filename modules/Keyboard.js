@@ -2,7 +2,7 @@ export class Keyboard {
     constructor() {
         const _keys = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
         this.clicked 
-        this.keyCodesClicked = [];
+        this.keysClicked = [];
         
         this.createKeyboard = (keys) => {
             for (let i = 0; i < _keys.length; i++) {
@@ -27,7 +27,15 @@ export class Keyboard {
             clickedKey.classList.add('clicked');
             this.clicked = clickedKey.textContent;
         }
-            
+    checkIfClicked(letter) {
+        if (this.keysClicked.includes(letter)) {
+            return true
+        }
+        else {
+            this.keysClicked.push(this.clicked);
+            return false
+        };
+    }       
 
     }
     returnKey() {

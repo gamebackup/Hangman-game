@@ -25,15 +25,17 @@ class Game {
 
     startGame(e) {
         // console.log(e.target.classList)
-        if (e.keyCode < 65 || e.keyCode > 90  || e.target.classList.contains('clicked') || !e.target.classList.contains('letter')  && e.keyCode === undefined || this.keyboard.keyCodesClicked.includes(e.keyCode)) return;
+        if (e.keyCode < 65 || e.keyCode > 90  || e.target.classList.contains('clicked') || !e.target.classList.contains('letter')  && e.keyCode === undefined) return;
         const word = this.word.getWord();
         const result = this.checkWin(word);
 
         if (this.hangman.mistakes >= this.hangman.maxMistakes || result) return;
         
-        if (e.keyCode) this.keyboard.keyCodesClicked.push(e.keyCode);
         this.keyboard.getKey(e);
         const letter = this.keyboard.returnKey();
+        
+        if (this.keyboard.checkIfClicked(letter)) return;
+
         this.getResult(letter, word);
         if (this.checkWin(word)) {
             const win = ResultBoard.checkResult(this);
