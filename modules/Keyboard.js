@@ -27,6 +27,7 @@ export class Keyboard {
             clickedKey.classList.add('clicked');
             this.clicked = clickedKey.textContent;
         }
+    }
     checkIfClicked(letter) {
         if (this.keysClicked.includes(letter)) {
             return true
@@ -37,7 +38,7 @@ export class Keyboard {
         };
     }       
 
-    }
+    
     returnKey() {
         return this.clicked
     }
