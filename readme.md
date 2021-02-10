@@ -2,7 +2,7 @@
 
 Hangman-game is online version of popular paper and pencil game. Your job is to guess the password by suggesting letters within a certain number of guesses.
 
-![menu snipped](/img/snippet.jpg)
+![menu snipped](/img/snippet.png)
 
 ## Technologies
 
